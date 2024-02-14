@@ -21,12 +21,9 @@ class NChecking extends StatelessWidget {
       builder: (context, state) {
         if (state is ConnectedSucessState) {
           return const MainPage();
-          // return const MainScreen();
-        }
-        // else if (state is ConnectedFailureState) {
-        //   return const NoConnectionErorr();
-        // }
-        else {
+        } else if (state is ConnectedFailureState) {
+          return const NoConnectionErorr();
+        } else {
           // return Container();
           // TODO
           // return const NoConnectionErorr();
@@ -42,11 +39,11 @@ class NoConnectionErorr extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             // LoadingAnimationWidget.staggeredDotsWave(
             //     color: primaryColor, size: 50.0),
             // SizedBox(height: 3.h),

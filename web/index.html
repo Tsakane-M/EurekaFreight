@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="$FLUTTER_BASE_HREF">
 
   <meta charset="UTF-8">
@@ -40,19 +27,47 @@
   <script src="flutter.js" defer></script>
 </head>
 <body>
+  <!-- Add a div element to hold the Flutter app -->
+  <div id="flutter-app"></div>
+
   <script>
+    // Load main.dart.js using _flutter.loader.loadDartScript
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
+      _flutter.loader.loadDartScript({
+        url: 'main.dart.js',
+        libraryUri: 'main.dart',
+        // Other options if needed
+      }).then(function() {
+        // Call the main method in main.dart
+        // Ensure that the main method is present in your Dart code
+        if (window.dartMainRunner) {
+          window.dartMainRunner(['main.dart']);
         }
-      }).then(function(engineInitializer) {
-        return engineInitializer.initializeEngine();
-      }).then(function(appRunner) {
-        return appRunner.runApp();
       });
     });
+  </script>
+
+  <!-- The rest of your Firebase initialization script -->
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDsJ0ze0-Ka48AdUVS3Bcmfx7-xYdcJAqI",
+      authDomain: "eureka-freight.firebaseapp.com",
+      projectId: "eureka-freight",
+      storageBucket: "eureka-freight.appspot.com",
+      messagingSenderId: "680487643095",
+      appId: "1:680487643095:web:dcbbc0d61e26ff5fb28d92",
+      measurementId: "G-2VX72MYTHW"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
   </script>
 </body>
 </html>

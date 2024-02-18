@@ -66,7 +66,7 @@ class ContactDesktop extends StatelessWidget {
                       ],
                     ),
                     InkWell(
-                      onTap: () => openURL(whatsapp),
+                      onTap: () {},
                       child: Container(
                         padding: const EdgeInsets.symmetric(
                             vertical: 5, horizontal: 20),
@@ -100,7 +100,7 @@ class ContactDesktop extends StatelessWidget {
                                 e.value.icon,
                                 color: theme.textColor,
                               ),
-                              onPressed: () => openURL(e.value.url),
+                              onPressed: () {},
                               highlightColor: Colors.white54,
                               iconSize: 21,
                             ))

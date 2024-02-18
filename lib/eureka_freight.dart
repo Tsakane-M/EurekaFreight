@@ -9,8 +9,8 @@ import 'package:provider/provider.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
 
-class MySite extends StatelessWidget {
-  const MySite({Key? key}) : super(key: key);
+class EurekaFreight extends StatelessWidget {
+  const EurekaFreight({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class MySite extends StatelessWidget {
           return Sizer(builder: (context, orientation, deviceType) {
             return MaterialApp(
               debugShowCheckedModeBanner: false,
-              title: 'Sudesh',
+              title: 'Eureka Freight',
               theme: AppTheme.themeData(state.isDarkThemeOn, context),
               initialRoute: "/",
               routes: {"/": (context) => const NChecking()},

@@ -40,23 +40,16 @@
   <script src="flutter.js" defer></script>
 </head>
 <body>
-   <!-- Add a div element to hold the Flutter app -->
-   <div id="flutter-app"></div>
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
-        url: 'main.dart',
-        libraryUri: 'main.dart',
         serviceWorker: {
           serviceWorkerVersion: serviceWorkerVersion,
         }
       }).then(function(engineInitializer) {
         return engineInitializer.initializeEngine();
       }).then(function(appRunner) {
-        if (window.dartMainRunner) {
-          window.dartMainRunner(['main.dart']);
-        }
         return appRunner.runApp();
       });
     });

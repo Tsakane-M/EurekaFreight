@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'my_site.dart';
+import 'eureka_freight.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const MySite());
+  runApp(const EurekaFreight());
 }

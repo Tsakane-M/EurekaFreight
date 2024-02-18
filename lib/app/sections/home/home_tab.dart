@@ -37,17 +37,6 @@ class HomeTab extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    EntranceFader(
-                      offset: const Offset(0, 0),
-                      delay: const Duration(seconds: 2),
-                      duration: const Duration(milliseconds: 800),
-                      child: Image.asset(StaticImage.hi, height: 10.sp),
-                    ),
-                  ],
-                ),
                 Space.y(1.w)!,
                 Text(
                   websiteIntro,

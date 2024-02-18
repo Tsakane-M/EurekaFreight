@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
   <base href="$FLUTTER_BASE_HREF">
 
   <meta charset="UTF-8">
@@ -16,7 +29,7 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>mysite</title>
+  <title>Eureka Freight</title>
   <link rel="manifest" href="manifest.json">
 
   <script>
@@ -27,34 +40,36 @@
   <script src="flutter.js" defer></script>
 </head>
 <body>
-  <!-- Add a div element to hold the Flutter app -->
-  <div id="flutter-app"></div>
-
+   <!-- Add a div element to hold the Flutter app -->
+   <div id="flutter-app"></div>
   <script>
-    // Load main.dart.js using _flutter.loader.loadDartScript
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
-      _flutter.loader.loadDartScript({
+      _flutter.loader.loadEntrypoint({
         url: 'main.dart.js',
         libraryUri: 'main.dart',
-        // Other options if needed
-      }).then(function() {
-        // Call the main method in main.dart
-        // Ensure that the main method is present in your Dart code
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        }
+      }).then(function(engineInitializer) {
+        return engineInitializer.initializeEngine();
+      }).then(function(appRunner) {
         if (window.dartMainRunner) {
           window.dartMainRunner(['main.dart']);
         }
+        return appRunner.runApp();
       });
     });
   </script>
-
-  <!-- The rest of your Firebase initialization script -->
   <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
   
     // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
       apiKey: "AIzaSyDsJ0ze0-Ka48AdUVS3Bcmfx7-xYdcJAqI",
       authDomain: "eureka-freight.firebaseapp.com",

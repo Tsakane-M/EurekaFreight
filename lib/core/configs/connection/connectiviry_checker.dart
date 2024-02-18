@@ -3,30 +3,25 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mysite/app/sections/main/main_section.dart';
 import 'bloc/connected_bloc.dart';
 
-class NChecking extends StatelessWidget {
-  const NChecking({Key? key}) : super(key: key);
+class ConnectivityChecker extends StatelessWidget {
+  const ConnectivityChecker({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<ConnectedBloc, ConnectedState>(
       listener: (context, state) {
-        // if (state is ConnectedSucessState) {
-        //   ScaffoldMessenger.of(context).showSnackBar(
-        //       const SnackBar(content: Text('Internet Connected')));
-        // } else if (state is ConnectedFailureState) {
-        //   ScaffoldMessenger.of(context)
-        //       .showSnackBar(const SnackBar(content: Text('Internet Lost')));
-        // }
+        if (state is ConnectedSucessState) {
+          ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(content: Text('Internet Connected')));
+        } else if (state is ConnectedFailureState) {
+          ScaffoldMessenger.of(context)
+              .showSnackBar(const SnackBar(content: Text('Internet Lost')));
+        }
       },
       builder: (context, state) {
-        if (state is ConnectedSucessState) {
-          return const MainPage();
-        } else if (state is ConnectedFailureState) {
+        if (state is ConnectedFailureState) {
           return const NoConnectionErorr();
         } else {
-          // return Container();
-          // TODO
-          // return const NoConnectionErorr();
           return const MainPage();
         }
       },
@@ -44,9 +39,6 @@ class NoConnectionErorr extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // LoadingAnimationWidget.staggeredDotsWave(
-            //     color: primaryColor, size: 50.0),
-            // SizedBox(height: 3.h),
             Text("Connection failed!"),
           ],
         ),
@@ -54,4 +46,3 @@ class NoConnectionErorr extends StatelessWidget {
     );
   }
 }
-// TODO

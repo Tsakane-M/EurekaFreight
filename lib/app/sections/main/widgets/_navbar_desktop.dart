@@ -68,7 +68,6 @@ class _NavBarTablet extends StatelessWidget {
           ),
           Space.xm!,
           const NavBarLogo(),
-          // Space.x1!,
         ],
       ),
     );

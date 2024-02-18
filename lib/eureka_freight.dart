@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mysite/core/configs/configs.dart';
 import 'package:mysite/core/configs/connection/bloc/connected_bloc.dart';
-import 'package:mysite/core/configs/connection/network_check.dart';
+import 'package:mysite/core/configs/connection/connectiviry_checker.dart';
 import 'package:mysite/core/providers/drawer_provider.dart';
 import 'package:mysite/core/providers/scroll_provider.dart';
 import 'package:mysite/core/theme/cubit/theme_cubit.dart';
@@ -31,7 +31,7 @@ class EurekaFreight extends StatelessWidget {
               title: 'Eureka Freight',
               theme: AppTheme.themeData(state.isDarkThemeOn, context),
               initialRoute: "/",
-              routes: {"/": (context) => const NChecking()},
+              routes: {"/": (context) => const ConnectivityChecker()},
             );
           });
         }),

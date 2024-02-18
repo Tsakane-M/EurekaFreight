@@ -13,19 +13,18 @@ class Footer extends StatelessWidget {
       margin: EdgeInsets.fromLTRB(0, height * 0.05, 0, 0),
       height: height * 0.07,
       width: width,
-      child: Center(
+      child: const Center(
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text("Developed by "),
-            InkWell(
-              onTap: () => openURL(gitHub),
-              child: const Text(
-                " Sudesh Bandara 💙",
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
+            Text("Copyright "),
+            Text(
+              "Eureka Freight |",
+              style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            const Text(" © 2022"),
+            Text(
+              " All Rights Reserved  © 2024",
+            ),
           ],
         ),
       ),

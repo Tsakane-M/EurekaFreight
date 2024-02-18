@@ -1,26 +1,24 @@
-String hellotag = '''Hi there, Welcome to My Space  ''';
-
-String yourname = "I'm Sudesh Bandara,";
+String websiteIntro =
+    "Global Excellence in Freight Services: Your Trusted Partner for Seamless Forwarding and Customs Clearance.";
 // String hometitle2 = "A Mobile Application\nDeveloper";
 
-String animationtxt1 = " Mobile Application Developer";
-String animationtxt2 = " UI/UX Designer";
-String animationtxt3 = " Web Developer";
+String animationtxt1 = "Facilitating Transactions";
+String animationtxt2 = "Risk Management";
+String animationtxt3 = "Record-keeping and Reporting";
 
 //
-String contactHeadding = "Let’s try my service now!";
-String contactSubHeadding =
-    "Let’s work together and make everything super cute and super useful.";
+String contactHeadding = "Contact Us";
+String contactSubHeadding = "Don't be afraid to reach out. You + us = awesome.";
 //
 String miniDescription =
-    "Freelancer providing services for programming and design content needs. Join me down below and let's get started!";
+    "Facilitating seamless cross-border trade, we provide expert clearing services for goods, ensuring swift and compliant customs processes. Simplifying international logistics for a smooth and efficient supply chain.";
 
 String servicesSubHeading =
-    "Since the beginning of my journey as a freelance designer and developer, I've worked in startups and collaborated with talented people to create digital products for both business and consumer use. I offer a wide range of services, including brand design, programming and teaching.";
+    "Eureka Freight provides its valued customers with the highest level of service in freight forwarding, customs clearance, transportation & courier through our own local offices as well as our global network of partners.With these selected global partners, Eureka Freight is able to provide a door to door forwarding and clearing service at competitive rates to and from most countries worldwide.Relationships with airlines & shipping lines are strong which enables us to negotiate competitive rates & reliable, efficient services at all times. ";
 //
 
 String protfolioSubHeading =
-    "Since the beginning of my journey as a designer and developer, I have created digital products for business and consumer use. This is a little bit.";
+    "Eureka Freight was pioneered in 2024 by Ruth Mhlanga, Daniel Mhlanga. The company has grown from strength to strength and has established itself as a leading freight forwarder in Zimbabwe. The company has a strong team of dedicated staff who are committed to providing the highest level of service to our customers.";
 const String aboutMeHeadline =
     'I\'m Sudesh Bandara, a Mobile App developer, Web developer and UI designer.';
 

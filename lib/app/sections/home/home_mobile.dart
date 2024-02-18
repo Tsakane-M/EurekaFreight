@@ -7,9 +7,10 @@ import 'package:mysite/changes/strings.dart';
 import 'package:mysite/core/animations/entrance_fader.dart';
 import 'package:mysite/core/animations/zoom_animation.dart';
 import 'package:mysite/core/configs/configs.dart';
+import 'package:mysite/core/providers/scroll_provider.dart';
 import 'package:mysite/core/res/responsive_size.dart';
+import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
-import 'package:universal_html/html.dart' as html;
 
 import 'widgets/animation_text.dart';
 
@@ -18,25 +19,15 @@ class HomeMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scrollProvider = Provider.of<ScrollProvider>(context);
     return Padding(
       padding: EdgeInsets.only(left: 10.w, top: 10.h, right: 10.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                hellotag,
-                style: AppText.h3!.copyWith(fontSize: isFontSize(context, 16)),
-              ),
-              // Space.x!,
-              Image.asset(StaticImage.hi, height: 10.sp),
-            ],
-          ),
           // Space.y(1.w)!,
           Text(
-            yourname,
+            websiteIntro,
             style: TextStyle(
               fontSize: isFontSize(context, 28),
               fontWeight: FontWeight.w600,
@@ -46,13 +37,6 @@ class HomeMobile extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Text(
-                "A ",
-                style: TextStyle(
-                  fontSize: isFontSize(context, 18),
-                  fontWeight: FontWeight.w400,
-                ),
-              ),
               AnimatedTextKit(
                 animatedTexts: mobileList,
                 repeatForever: true,
@@ -66,9 +50,9 @@ class HomeMobile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               ColorChageButton(
-                text: 'download cv',
+                text: 'Learn More',
                 onTap: () {
-                  html.window.open(resume, "pdf");
+                  scrollProvider.jumpTo(1);
                 },
               ),
               const EntranceFader(

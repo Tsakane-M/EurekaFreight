@@ -1,6 +1,10 @@
 import 'package:mysite/app/sections/home/widgets/animation_text.dart';
 import 'package:mysite/core/animations/zoom_animation.dart';
+import 'package:mysite/core/color/colors.dart';
+import 'package:mysite/core/color/colors.dart';
+import 'package:mysite/core/providers/scroll_provider.dart';
 import 'package:mysite/core/res/responsive_size.dart';
+import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 import 'package:universal_html/html.dart' as html;
 import 'package:animated_text_kit/animated_text_kit.dart';
@@ -12,15 +16,20 @@ import 'package:mysite/changes/strings.dart';
 import 'package:mysite/core/animations/entrance_fader.dart';
 import 'package:mysite/core/configs/configs.dart';
 
+import '../../../core/color/colors.dart';
+import '../../../core/color/colors.dart';
+import '../../../core/color/colors.dart';
+
 class HomeDesktop extends StatelessWidget {
   const HomeDesktop({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
+    final scrollProvider = Provider.of<ScrollProvider>(context);
 
     return SizedBox(
-      height: 80.h,
+      height: MediaQuery.of(context).size.height,
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 10.w),
         child: Row(
@@ -33,37 +42,16 @@ class HomeDesktop extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Text(hellotag,
-                          style: const TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.w100,
-                          )),
-                      EntranceFader(
-                        offset: const Offset(0, 0),
-                        delay: const Duration(seconds: 2),
-                        duration: const Duration(milliseconds: 800),
-                        child: Image.asset(StaticImage.hi, height: 40),
-                      ),
-                    ],
-                  ),
                   Space.y(0.5.w)!,
-                  Text(yourname,
+                  Text(websiteIntro,
                       style: const TextStyle(
                         fontSize: 50,
                         fontWeight: FontWeight.w600,
+                        color: Color(0xFFc8a135),
                       )),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      const Text("A ",
-                          style: TextStyle(
-                            fontSize: 32,
-                            fontWeight: FontWeight.w400,
-                          )),
                       AnimatedTextKit(
                         isRepeatingAnimation: true,
                         repeatForever: true,
@@ -83,9 +71,9 @@ class HomeDesktop extends StatelessWidget {
                   ),
                   Space.y(3.w)!,
                   ColorChageButton(
-                    text: 'download cv',
+                    text: 'Learn More',
                     onTap: () {
-                      html.window.open(resume, "pdf");
+                      scrollProvider.jumpTo(1);
                     },
                   ),
                 ],

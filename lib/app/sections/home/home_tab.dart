@@ -40,11 +40,6 @@ class HomeTab extends StatelessWidget {
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Text(
-                      hellotag,
-                      style: AppText.h3!
-                          .copyWith(fontSize: isFontSize(context, 18)),
-                    ),
                     EntranceFader(
                       offset: const Offset(0, 0),
                       delay: const Duration(seconds: 2),
@@ -55,9 +50,9 @@ class HomeTab extends StatelessWidget {
                 ),
                 Space.y(1.w)!,
                 Text(
-                  yourname,
+                  websiteIntro,
                   style: TextStyle(
-                    fontSize: isFontSize(context, 38),
+                    fontSize: isFontSize(context, 30),
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -95,7 +90,7 @@ class HomeTab extends StatelessWidget {
                 ),
                 Space.y(2.w)!,
                 ColorChageButton(
-                  text: 'download cv',
+                  text: 'Learn More',
                   onTap: () {
                     html.window.open(resume, "pdf");
                   },

@@ -7,7 +7,7 @@ class ServiceMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const CustomSectionHeading(text: '\nWhat I can do?'),
+        const CustomSectionHeading(text: '\nServices'),
         Space.y(3.w)!,
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 10.w),
@@ -22,7 +22,7 @@ class ServiceMobile extends StatelessWidget {
           ),
           options: CarouselOptions(
             viewportFraction: 0.6,
-            height: 300,
+            height: 500,
             autoPlay: true,
             autoPlayInterval: const Duration(seconds: 5),
             enlargeCenterPage: true,

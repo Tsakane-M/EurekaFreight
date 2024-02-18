@@ -22,9 +22,9 @@ class _NavbarDesktopState extends State<_NavbarDesktop> {
             const NavBarLogo(),
             Space.xm!,
             ...NavBarUtils.names.asMap().entries.map(
-                  (e) => NavBarActionButton(
-                    label: e.value,
-                    index: e.key,
+                  (entry) => NavBarActionButton(
+                    label: entry.value,
+                    index: entry.key,
                   ),
                 ),
             // Space.x!,

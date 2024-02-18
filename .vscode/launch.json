@@ -5,10 +5,10 @@
         "name": "Flutter Web (Release) - Chrome",
         "request": "launch",
         "type": "dart",
-        "args": ["flutter", "run", "--release", "-d", "chrome"],
+        "args": ["flutter", "run", "--debug", "-d", "chrome"],
         "cwd": "${workspaceFolder}",
         "program": "${workspaceFolder}/lib/main.dart",
-        "flutterMode": "release"
+        "flutterMode": "debug"
       },
 
       {

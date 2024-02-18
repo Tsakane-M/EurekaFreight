@@ -49,7 +49,7 @@ extension ThemeExtras on ThemeData {
       ? const Color(0xFF403930)
       : const Color(0xFFFFF8F2);
   //
-  Color get secondaryColor => const Color(0xFFFE53BB);
+  Color get secondaryColor => const Color(0xFF8e452f); //
   //
   Gradient get serviceCard =>
       brightness == Brightness.light ? grayWhite : grayBack;

@@ -33,7 +33,7 @@ class _ServiceCardState extends State<_ServiceCard> {
         padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
         decoration: BoxDecoration(
           // gradient: isHover ? pinkpurple : grayBack,
-          gradient: isHover ? pinkpurple : theme.serviceCard,
+          gradient: isHover ? yellowBrown : theme.serviceCard,
           borderRadius: BorderRadius.circular(15),
           boxShadow: isHover ? [primaryColorShadow] : [blackColorShadow],
         ),
@@ -87,10 +87,10 @@ class _ServiceCardState extends State<_ServiceCard> {
                                 const Text('🛠   '),
                                 Text(e,
                                     style: TextStyle(
-                                      color: isHover
-                                          ? whiteColor
-                                          : theme.textColor,
-                                    )),
+                                        color: isHover
+                                            ? whiteColor
+                                            : theme.textColor,
+                                        overflow: TextOverflow.ellipsis)),
                               ],
                             ))
                         .toList()),

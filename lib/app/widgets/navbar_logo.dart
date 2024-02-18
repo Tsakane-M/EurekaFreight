@@ -8,23 +8,26 @@ class NavBarLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // theme
-    var theme = Theme.of(context);
-    //
-    var textSty = TextStyle(
-      color: theme.textColor,
-      fontWeight: FontWeight.w100,
+
+    var baseTextStyle = TextStyle(
+      fontWeight: FontWeight.bold,
       fontSize: Responsive.isDesktop(context) ? 32 : 20,
+      fontFamily: 'Galet Bold',
     );
+
+    var textStyleEureka = baseTextStyle.copyWith(
+      color: const Color(0xFFc8a135), // Set color to #c8a135 for Eureka
+    );
+
+    var textStyleFreight = baseTextStyle.copyWith(
+        color: const Color(0xFF8e452f), // Set color to #8e452f for Freight
+        fontWeight: FontWeight.normal);
 
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text("< ", style: textSty),
-        Text("Sudesh", style: textSty),
-        Text(
-          Responsive.isDesktop(context) ? " />\t\t" : " />",
-          style: textSty,
-        )
+        Text("Eureka ", style: textStyleEureka),
+        Text("Freight", style: textStyleFreight),
       ],
     );
   }

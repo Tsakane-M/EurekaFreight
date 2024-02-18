@@ -24,7 +24,7 @@ class _PortfolioDesktopState extends State<PortfolioDesktop> {
       padding: EdgeInsets.symmetric(horizontal: size.width / 8),
       child: Column(
         children: [
-          const CustomSectionHeading(text: "\nProjects"),
+          const CustomSectionHeading(text: "\nAbout"),
           Space.y(1.w)!,
           CustomSectionSubHeading(text: protfolioSubHeading),
           Space.y(2.w)!,
@@ -42,7 +42,7 @@ class _PortfolioDesktopState extends State<PortfolioDesktop> {
           ),
           Space.y(3.w)!,
           OutlinedButton(
-            onPressed: () => openURL(gitHub),
+            onPressed: () {},
             child: const Padding(
               padding: EdgeInsets.all(8.0),
               child: Text(

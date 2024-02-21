@@ -18,7 +18,7 @@ String servicesSubHeading =
 //
 
 String protfolioSubHeading =
-    "Eureka Freight was pioneered in 2024 by Ruth Mhlanga, Daniel Mhlanga. The company has grown from strength to strength and has established itself as a leading freight forwarder in Zimbabwe. The company has a strong team of dedicated staff who are committed to providing the highest level of service to our customers.";
+    "Eureka Freight was pioneered in 2019 by Ruth Mhlanga, Daniel Mhlanga. The company has grown from strength to strength and has established itself as a leading freight forwarder in Zimbabwe. The company has a strong team of dedicated staff who are committed to providing the highest level of service to our customers.";
 const String aboutMeHeadline =
     'I\'m Sudesh Bandara, a Mobile App developer, Web developer and UI designer.';
 

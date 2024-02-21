@@ -1,24 +1,14 @@
 import 'package:mysite/app/sections/home/widgets/animation_text.dart';
 import 'package:mysite/core/animations/zoom_animation.dart';
-import 'package:mysite/core/color/colors.dart';
-import 'package:mysite/core/color/colors.dart';
 import 'package:mysite/core/providers/scroll_provider.dart';
 import 'package:mysite/core/res/responsive_size.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
-import 'package:universal_html/html.dart' as html;
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:mysite/app/widgets/color_chage_btn.dart';
-import 'package:mysite/changes/img.dart';
-import 'package:mysite/changes/links.dart';
 import 'package:mysite/changes/strings.dart';
-import 'package:mysite/core/animations/entrance_fader.dart';
 import 'package:mysite/core/configs/configs.dart';
-
-import '../../../core/color/colors.dart';
-import '../../../core/color/colors.dart';
-import '../../../core/color/colors.dart';
 
 class HomeDesktop extends StatelessWidget {
   const HomeDesktop({Key? key}) : super(key: key);
@@ -50,7 +40,7 @@ class HomeDesktop extends StatelessWidget {
                         color: Color(0xFFc8a135),
                       )),
                   Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       AnimatedTextKit(
                         isRepeatingAnimation: true,

@@ -2,7 +2,6 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:mysite/app/sections/home/widgets/animation_text.dart';
 import 'package:mysite/app/widgets/color_chage_btn.dart';
-import 'package:mysite/changes/img.dart';
 import 'package:mysite/changes/links.dart';
 import 'package:mysite/changes/strings.dart';
 import 'package:mysite/core/animations/entrance_fader.dart';

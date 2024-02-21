@@ -63,10 +63,11 @@ class _MobileDrawer extends StatelessWidget {
                         ),
                       ),
                   Space.y(5.w)!,
-                  ColorChageButton(
-                    text: 'REQUEST A QUOTE',
-                    onTap: () {},
-                  ),
+                  //hiding this until we want to use it
+                  // ColorChageButton(
+                  //   text: 'REQUEST A QUOTE',
+                  //   onTap: () {},
+                  // ),
                 ],
               ),
             ),

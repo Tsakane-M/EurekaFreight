@@ -2,10 +2,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:mysite/app/utils/project_utils.dart';
 import 'package:mysite/app/widgets/custom_text_heading.dart';
-import 'package:mysite/changes/links.dart';
 import 'package:mysite/changes/strings.dart';
 import 'package:mysite/core/configs/configs.dart';
-import 'package:mysite/core/util/constants.dart';
 import 'package:sizer/sizer.dart';
 
 import 'widgets/project_card.dart';
@@ -42,19 +40,6 @@ class PortfolioMobileTab extends StatelessWidget {
           ),
         ),
         Space.y(3.w)!,
-        OutlinedButton(
-          onPressed: () {},
-          child: const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text(
-              'See More',
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ),
-        )
       ],
     );
   }

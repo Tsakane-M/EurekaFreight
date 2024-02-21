@@ -14,7 +14,7 @@ class ProjectCard extends StatefulWidget {
 }
 
 class ProjectCardState extends State<ProjectCard> {
-  bool isHover = false;
+  bool isHover = true;
 
   @override
   Widget build(BuildContext context) {
@@ -22,17 +22,10 @@ class ProjectCardState extends State<ProjectCard> {
     double height = MediaQuery.of(context).size.height;
     var theme = Theme.of(context);
     return InkWell(
-      hoverColor: Colors.transparent,
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
       onTap: () {},
-      onHover: (isHovering) {
-        if (isHovering) {
-          setState(() => isHover = true);
-        } else {
-          setState(() => isHover = false);
-        }
-      },
+      onHover: (value) {},
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 1.w),
         width: Responsive.isDesktop(context) ? 30.w : 70.w,
@@ -50,10 +43,6 @@ class ProjectCardState extends State<ProjectCard> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset(
-                    widget.project.icons,
-                    height: height * 0.05,
-                  ),
                   SizedBox(height: height * 0.02),
                   Text(
                     widget.project.titles,
@@ -83,14 +72,10 @@ class ProjectCardState extends State<ProjectCard> {
                 height: 36.h,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  image: DecorationImage(
-                      image: AssetImage(widget.project.banners),
+                  image: const DecorationImage(
+                      image: AssetImage('assets/imgs/cut_logo.jpg'),
                       fit: BoxFit.cover),
                 ),
-                // child: Image.asset(
-                //   widget.project.banners,
-                //   fit: BoxFit.cover,
-                // ),
               ),
             ),
           ],

@@ -23,7 +23,7 @@ List<ServicesUtils> servicesUtils = [
     name: 'Risk Management',
     icon: 'assets/icons/graphic.svg',
     description:
-        "Our pivotal role in risk management makes us a cornerstone of the financial ecosystem. Serving as a counterparty to both buyers and sellers, we act as the guarantor, significantly reducing counterparty risk. In the event of a default, we step in, fulfilling obligations and fostering confidence, stability, and trust among investors and institutions.",
+        "Our pivotal role in risk management makes us a cornerstone of the financial ecosystem. Serving as a counterparty to both buyers and sellers, we act as the guarantor, significantly reducing counterparty risk.",
     tool: ['Tailored Risk Solutions', 'Risk Analytics', 'Risk Advisory'],
   ),
   ServicesUtils(
@@ -41,7 +41,7 @@ List<ServicesUtils> servicesUtils = [
     name: 'Regulatory Compliance',
     icon: 'assets/icons/website.svg',
     description:
-        "We are committed to ensuring that our clients are in compliance with all relevant regulations. Our team of experts is dedicated to providing the highest level of service and support to our clients, ensuring that they are in compliance with all relevant regulations. We provide a comprehensive range of services, including regulatory reporting, compliance monitoring, and regulatory advisory services, to help our clients navigate the complex and ever-changing regulatory landscape.",
+        "We are committed to ensuring that our clients are in compliance with all relevant regulations. Our team of experts is dedicated to providing the highest level of service and support to our clients, ensuring that they are in compliance with all relevant regulations.",
     tool: [
       'Regulatory Reporting',
       'Compliance Monitoring',
@@ -52,7 +52,7 @@ List<ServicesUtils> servicesUtils = [
     name: 'Advisory Services',
     icon: 'assets/icons/website.svg',
     description:
-        "We are committed to providing our clients with the highest level of service and support. Our team of experts is dedicated to providing the highest level of service and support to our clients, ensuring that they have access to the most advanced and innovative technology solutions available. We provide a comprehensive range of services, including technology consulting, technology implementation, and technology support, to help our clients achieve their business goals.",
+        "We are committed to providing our clients with the highest level of service and support. Our team of experts is dedicated to providing the highest level of service and support to our clients, ensuring that they have access to the most advanced and innovative technology solutions available.",
     tool: [
       'Technology Consulting',
       'Technology Implementation',
